@@ -1,0 +1,19 @@
+---
+title: "Data"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(latexpdf)
+library(readxl)
+educat <- read_excel("Cleaned Data 1_Project 1.xlsx")
+```
+
+The data used in this project is from "2014-2015 School Quality Reports Results for High Schools (NYC)". This data set is the result of Quality Review, a process that evaluates how well schools are organized to support student learning and teacher practice in New York State.
+```{r}
+summary(educat)
+hist(educat$`Average Score SAT Math`, main = "Distribution of Average SAT Math Scores", xlab ="Average SAT Math Scores",nclass = 16)
+hist(educat$`Average Score SAT Writing`, main = "Distribution of Average SAT Writing Scores", xlab = "Average SAT Writing Scores",nclass = 15)
+hist(educat$`Average Score SAT Critical Reading`, main = "Distribution of Average SAT Critical Reading Scores", xlab = "Average SAT Critical Reading Scores",nclass = 15)
+```

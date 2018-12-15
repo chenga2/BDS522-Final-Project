@@ -1,0 +1,27 @@
+---
+title: "The Impact of Teacher Quality on Student Achievement"
+author: "Anli Cheng"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(latexpdf)
+library(readxl)
+educat <- read_excel("Cleaned Data 1_Project 1.xlsx")
+```
+
+
+Education has always been an important part of our society for several reasons. It’s been argued that society can benefit from education in terms of the higher standard of living that comes with increased productivity. Education may also make citizens more informed and active voters, which will have positive benefits for other citizens through improving the quality of the democratic process. Therefore, how can education quality be improved so that the society can reap the maximum benefits out of it is the motivation for this project. This project will use student achievement (measured by test score in SAT math, writing and reading) as an approx. of high school education quality and exam specifically around how teacher quality impact the student achievement. Does the teacher quality matter a lot for education quality? If so, this project will draw public attention to the necessity of improving teacher quality in general education. If not, this project will pave the path to explore other attributes that may contribute more to the improvements in education quality.
+
+## Literature Review
+From Gruber's book of "Public Finance and Public Policy", in the United States, education is the single largest expenditure item for state and local governments: they spend 28% of their budgets to provide their citizens with this service.This is largely due to the positive role education play in facilitating democratic process, creating positive externalities and providing economic benefits for the country as a whole. However, how can this money be spent most efficiently has attracted immense research effort. One aspect of this is studying the impact of school quality on student test scores. Experimental evidence from Tennessee suggests that smaller class sizes lead to much higher student test scores.Recent studies of effective charter schools have suggested looking beyond measures such as class size. In particular, analyses of what makes charter schools most effective suggest that longer school days and a longer school year, teachers who receive frequent feedback, and instruction driven by data on student performance are the keys to more successful schools. Teacher quality, as one of key attributes of school quality, nevetheless, has rarely been studied systematically. This project, therefore, will attempt to explore more around the impact of teacher quality on student's achievement.
+
+### Reference
+Gruber, Jonathan, Public Finance and Public Policy, fifth edition, New York, NY : Worth Publishers (2005)
+
+Max Roser, Mohamed Nagdy and Esteban Ortiz-Ospina (2018) - "Quality of Education". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/quality-of-education' 
+
+Dobbie, Will, Fryer Jr., Roland G., Are High-Quality Schools Enough to Increase Achievement among the Poor? Evidence from the Harlem Children's Zone, American Economic Journal: Applied Economics, Vol.3, No.3, July 2011
+

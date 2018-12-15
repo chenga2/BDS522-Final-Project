@@ -1,0 +1,36 @@
+---
+title: "Results"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(latexpdf)
+library(readxl)
+educat <- read_excel("Cleaned Data 1_Project 1.xlsx")
+attach(educat)
+```
+
+### The Impact of Teacher Quality on SAT Math Scores
+```{r}
+summary(lm(`Average Score SAT Math`~ `Percent of teachers with 3 or more years of experience` + `Rigorous Instruction - Percent Positive`+ `Collaborative Teachers - Percent Positive`+ `Economic Need Index` + `Supportive Environment - Percent Positive` + `Percent in Temp Housing - 4yr`))
+```
+
+### The Impact of Teacher Quality on SAT Writing Scores
+
+```{r}
+summary(lm(`Average Score SAT Writing`~ `Percent of teachers with 3 or more years of experience` + `Rigorous Instruction - Percent Positive`+ `Collaborative Teachers - Percent Positive` + `Economic Need Index` + `Supportive Environment - Percent Positive` + `Percent in Temp Housing - 4yr`))
+```
+
+### The Impact of Teacher Quality on SAT Critical Reading Scores
+```{r}
+summary(lm(`Average Score SAT Critical Reading`~ `Percent of teachers with 3 or more years of experience` + `Rigorous Instruction - Percent Positive`+ `Collaborative Teachers - Percent Positive`+ `Economic Need Index` + `Supportive Environment - Percent Positive` + `Percent in Temp Housing - 4yr`))
+```
+
+Overall, better teacher quality does not appear to have a significant positive impact on the students achievements. Multiple regressions are conducted on all three subjects of SAT i.e. math, writing and reading which are considered to be the core of general education. However, in all of the multiple regression trial, schools that have more teachers will three years or more experiences in the education field and who can give rigorous instructions contribute very little to the improvements of students’ scores, and none of the coefficients is statistically significant. It is also surprising to find out that schools with more collaborative teachers actually have lower average SAT scores in all three subjects and this negative relationship is statistically significant at 0.05 level for average SAT writing scores and statistically significant at 0.01 level for both average SAT math and critical reading scores. On average, 10% increase in the positive rating for teacher's collaborativeness will drag down the average SAT score of schools by 12, 9 and 10 for math, writing and critical reading respectively.
+
+Socioeconomic factors, originally controlled as cofounders, however, appear to have a significant negative impact on student's achievements. The schools with higher economic need index and greater percentage of students living in the temporary housing tend to have lower average SAT scores in all three subjects and such relationship is statistically significant even at significance level of 0.001. Supportive school environment, in contrast, is a positive contributor to student achievements. On average, 10% increase in the positive rating for a supportive school environment will improve the average SAT score of schools by 35, 23 and 19 for math, writing and critical reading respectively.
+
+## Conclusion
+The result suggest better teacher quality does not appear to have a significant positive impact on the students achievements. At this stage, however, we still cannot make absolute conclusion about the insignificant impact of teacher quality on student achievement because it can well be that better teacher quality may contribute positively to improve the top scores. Working with average SAT scores only can be biased to some extent which I also suggest to be limitation of the data. The implication we are certain at this stage is the negative impact that economic difficulties can impose on student achievements. There can be some talented students in poorer family who are unable to access sufficient level of education to maximise their potential. This is a market failure that government should pay attention to resolve. Finally, a supportive school environment, which can be translated into ensuring participation of students, accessibility to learning tools and healthy relationship throughout school communities, can be crucial in improving student achievements. These might be the areas worth schools focusing on to improve over time. 
+
